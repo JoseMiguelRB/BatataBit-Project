@@ -1,0 +1,764 @@
+/*
+    -Posicionamiento
+    -Modelo de Caja: padding, border, margin
+    -Tipografia
+    -Visuales
+    -Otros
+*/
+
+:root {
+    --bitcoin-orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201e1c;
+    --black: #282623;
+    --grey: #bababa;
+    --off-white: #FAF8F7;
+    --just-white: #FFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+
+header img {
+    width: 150px;
+    height: 24px;
+    margin-top: 60px;
+    align-self: center;
+}
+
+.header__title--container {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 218px;
+    margin-top: 50px;
+    text-align: center;
+    align-self: center;
+}
+
+.header__title--container h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+.header__title--container p {
+    margin-top: 25px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+}
+
+.header__title--container .header__button {
+    position: absolute;
+    left: calc(50% - 118px);
+    top: 270px;
+    display: block;
+    margin-top: 35px;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    background-color: var(--off-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.header__button span {
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url('./assets/icons/down-arrow.svg');
+}
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+}
+
+.main-exchange-container {
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.main-exchange-container--title {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.main-exchange-container .backgroundImg {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-image: url('./assets/img/Bitcoin.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-exchange-container--title h2 {
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+
+.main-exchange-container--title p {
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #757575;
+}
+
+.main-currency-table {
+    width: 100%;
+    min-width: 235px;
+    height: auto;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+}
+
+.main-currency-table .main-currency-table--title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--bitcoin-orange);
+}
+
+.main-currency-table .main-commisions-table--title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
+}
+
+.currency-table--container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-width: 230px;
+    padding: 0px 60px;
+    justify-content: space-evenly;
+    gap: 60px;
+    height: auto;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.currency-table--container > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.currency-table--container > div:nth-child(1) {
+    scroll-snap-align: center;
+}
+
+.currency-table--container > div:nth-child(2) {
+    scroll-snap-align: center;
+}
+
+.currency-table--container td {
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+}
+
+.currency-table--container .table__top-left {
+    border-radius: 15px 0 0 0;
+}
+
+.currency-table--container .table__top-right {
+    border-radius: 0 15px 0 0;
+}
+
+.currency-table--container .table__bottom-left {
+    border-radius: 0 0 15px 0;
+}
+
+.currency-table--container .table__bottom-right {
+    border-radius: 0 0 0 15px;
+}
+
+.currency-table--container .table__right {
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    color: #757575;
+}
+
+.currency-table--container .down {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url("./assets/icons/trending-down.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.currency-table--container .up {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url("./assets/icons/trending-up.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.currency-table--date {
+    width: 190px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 8px;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--soft-orange);
+}
+
+.currency-table--date p {
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: center;
+    color: var(--warm-black);
+}
+
+.currency-table--date p b {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    text-align: center;
+}
+
+.commisions-table--date {
+    width: 190px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 8px;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--soft-blue);
+}
+
+.commisions-table--date p {
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: center;
+    color: var(--warm-black);
+}
+
+.commisions-table--date p b {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    text-align: center;
+}
+
+.main-product-detail {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding-top: 2rem;
+    background-color: var(--warm-black);
+}
+
+.main-product-detail > span {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    top: -12px;
+    left: calc(50% - 25px);
+    background-image: url("./assets/icons/batata.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-product-detail div {
+    padding: 20px;
+}
+
+.main-product-detail div h2 {
+    padding-bottom: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    color: var(--just-white);
+}
+
+.main-product-detail div p {
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    color: rgba(128, 128, 128, 1);
+}
+
+.product-cards--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.product-detail-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 280px;
+    height: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(40, 38, 35, 1);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
+}
+
+.product-detail-card .product-detail-item {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-detail-card .clock {
+    background-image: url(./assets/icons/clock.svg);
+}
+
+.product-detail-card .eye {
+    background-image: url(./assets/icons/eye.svg);
+}
+
+.product-detail-card .money {
+    background-image: url(./assets/icons/dollar-sign.svg);
+}
+
+.product-detail-card .check {
+    background-image: url(./assets/icons/check-circle.svg);
+}
+
+.product-detail-card .product--card-title {
+    font-family: "DM Sans" sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+
+.product-detail-card .product-card-body {
+    font-family: "DM Sans" sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    color: rgba(128, 128, 128, 1);
+}
+
+.background-img {
+    width: 100%;
+}
+
+.background-img img {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.background-img h2 {
+    position: absolute;
+    z-index: 1;
+    font-family: "DM Sans", sans-serif;
+    left: calc(50% - 82.31px);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 40px;
+    color: var(--just-white);
+}
+
+.plans-container {
+    width: 100%;
+    height: auto;
+    margin-top: 4rem;
+}
+
+.plans-container h2 {
+    margin-bottom: 2rem;
+    font-family: "DM Sans" sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    color: var(--warm-black);
+}
+
+.plans-container > p {
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    color: rgba(117, 117, 117, 1);
+}
+
+.plans-container--choose {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    width: 100%;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.plans-container--choose div:nth-child(1), div:nth-child(2), div:nth-child(3) {
+    scroll-snap-align: center;
+}
+
+.plans-container--choose div:nth-child(1)  {
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 240px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    margin-left: 70px;
+    background-color: var(--just-white);
+    box-shadow: 0px 4px 8px 0px rgba(89, 73, 30, 0.16);
+}
+
+.plans-container--choose div:nth-child(2) {
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 240px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    background-color: var(--just-white);
+    box-shadow: 0px 4px 8px 0px rgba(89, 73, 30, 0.16);
+}
+
+.plans-container--choose div:nth-child(3)  {
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 240px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    margin-right: 70px;
+    background-color: var(--just-white);
+    box-shadow: 0px 4px 8px 0px rgba(89, 73, 30, 0.16);
+}
+
+.plans-container--choose div:nth-child(1) p:nth-child(1) {
+    font-family: "DM Sans" sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+.plans-container--choose div:nth-child(1) p:nth-child(2) {
+    font-family: "Inter";
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 62.93px;
+    letter-spacing: -0.08em;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+.plans-container--choose div:nth-child(1) p:nth-child(3) {
+    font-family: "Inter";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    text-align: center;
+    color: rgba(117, 117, 117, 1);
+}
+
+.plans-container--choose div:nth-child(1) button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px 12px 16px;
+    width: 155px;
+    font-family: "DM Sans" sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18.23px;
+    text-align: center;
+    color: var(--warm-black);
+    background-color: var(--off-white);
+    border: 2px solid rgba(247, 147, 26, 1);
+    border-radius: 4px;
+}
+
+.plans-container--choose div:nth-child(1) button span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    gap: 0px;
+    background-image: url(./assets/icons/orange-right-arrow.svg);
+}
+
+.plans-container--choose div:nth-child(2) p:nth-child(1) {
+    position: absolute;
+    top: -15px;
+    padding: 10px;
+    font-family: "Inter";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.52px;
+    text-align: center;
+    color: var(--just-white);
+    background-color: var(--bitcoin-orange);
+    border-radius: 8px;
+}
+
+.plans-container--choose div:nth-child(2) p:nth-child(2) {
+    font-family: "DM Sans" sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+.plans-container--choose div:nth-child(2) p:nth-child(3) {
+    font-family: "Inter";
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 62.93px;
+    letter-spacing: -0.08em;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+.plans-container--choose div:nth-child(2) p:nth-child(4) {
+    font-family: "Inter";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    text-align: center;
+    color: rgba(117, 117, 117, 1);
+}
+
+.plans-container--choose div:nth-child(2) button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px 12px 16px;
+    width: 155px;
+    font-family: "DM Sans" sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18.23px;
+    text-align: center;
+    color: var(--warm-black);
+    background-color: var(--off-white);
+    border: 2px solid rgba(247, 147, 26, 1);
+    border-radius: 4px;
+}
+
+.plans-container--choose div:nth-child(2) button span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    gap: 0px;
+    background-image: url(./assets/icons/orange-right-arrow.svg);
+}
+
+.plans-container--choose div:nth-child(3) p:nth-child(1) {
+    font-family: "DM Sans" sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+.plans-container--choose div:nth-child(3) p:nth-child(2) {
+    font-family: "Inter";
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 62.93px;
+    letter-spacing: -0.08em;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+.plans-container--choose div:nth-child(3) p:nth-child(3) {
+    font-family: "Inter";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    text-align: center;
+    color: rgba(117, 117, 117, 1);
+}
+
+.plans-container--choose div:nth-child(3) button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px 12px 16px;
+    width: 155px;
+    font-family: "DM Sans" sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18.23px;
+    text-align: center;
+    color: var(--warm-black);
+    background-color: var(--off-white);
+    border: 2px solid rgba(247, 147, 26, 1);
+    border-radius: 4px;
+}
+
+.plans-container--choose div:nth-child(3) button span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    gap: 0px;
+    background-image: url(./assets/icons/orange-right-arrow.svg);
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+
+}
+
+footer div {
+    width: 50%;
+}
+
+footer div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer div:nth-child(1) p {
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    color: var(--just-white);
+}
+
+footer div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer div:nth-child(2) span {
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    background-image: url(./assets/icons/batata.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer div:nth-child(2) p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    color: var(--soft-orange);
+}
